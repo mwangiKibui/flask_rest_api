@@ -35,7 +35,7 @@ def get_products():
 @app.route('/product/<id>', methods=['GET'])
 def get_product(id):
     product = Product.query.get(id)
-    return product_schema.jsonify(Product)
+    return product_schema.jsonify(product)
 
 #update a given product
 @app.route('/update_product/<id>', methods=['PUT'])
